@@ -16,10 +16,11 @@ namespace SCTApiTestProject.Tests
         }
 
         [Test]
-        public void NameShouldBeCarbonCredits()
+        public void NameShouldBe()
         {
+            string name = "Carbon credits";
             // Assert the name should be "Carbon credits”. 
-            Assert.AreEqual("Carbon credits", categoryDetails?.Name, "Name is not as expected.");
+            Assert.AreEqual(name, categoryDetails?.Name, "Name is not as expected.");
         }
 
         [Test]
@@ -30,13 +31,14 @@ namespace SCTApiTestProject.Tests
         }
 
         [Test]
-        public void GalleryPromotionDescriptionShouldContainExpectedText()
+        public void GalleryPromotionDescriptionShouldBe()
         {
+            string text = "Good position in category";
             var promotions = categoryDetails?.Promotions;
             var galleryPromotion = promotions != null ? Array.Find(promotions, p => p.Name == "Gallery") : null;
 
             // Assert the Promotions element with Name = "Gallery" has a Description that contains the text "Good position in category"
-            StringAssert.Contains("Good position in category", galleryPromotion?.Description,
+            StringAssert.Contains(text, galleryPromotion?.Description,
                 "Gallery promotion description does not contain expected text.");
         }
     }
