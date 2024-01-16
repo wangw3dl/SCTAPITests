@@ -1,19 +1,40 @@
-using System.Net.Http;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 
-namespace SCTApiTestProject.Tests
+public class TestSetup
 {
-    public class TestSetup
+    // Read the API endpoint from appsettings.json using IConfiguration
+    public static string ApiEndpoint
     {
-        public const string ApiEndpoint = "https://api.tmsandbox.co.nz/v1/Categories/6327/Details.json?catalogue=false";
-
-        public static async Task<CategoryDetails> InitializeCategoryDetails()
+        get
         {
-            using var httpClient = new HttpClient();
+            IConfigurationRoot configuration = GetConfiguration();
+            return configuration["ApiEndpoint"] ?? throw new InvalidOperationException("ApiEndpoint not found in appsettings.json");
+        }
+    }
 
-            var response = await httpClient.GetStringAsync(ApiEndpoint);
+    private static IConfigurationRoot GetConfiguration()
+    {
+        return new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+            .Build();
+    }
+
+    public static async Task<CategoryDetails> InitializeCategoryDetails()
+    {
+        using var httpClient = new HttpClient();
+
+        var response = await httpClient.GetStringAsync(ApiEndpoint);
+
+        if (response is not null)
+        {
             return JsonConvert.DeserializeObject<CategoryDetails>(response);
+        }
+        else
+        {
+            // Handle the case where the response is null (optional)
+            throw new InvalidOperationException("Response from the API is null.");
         }
     }
 }
