@@ -3890,11 +3890,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\APITests\\SCTApiTests\\SCTApiTestProject.csproj",
+      "projectUniqueName": "C:\\SCTAPITests\\SCTApiTests\\SCTApiTestProject.csproj",
       "projectName": "SCTApiTestProject",
-      "projectPath": "C:\\APITests\\SCTApiTests\\SCTApiTestProject.csproj",
+      "projectPath": "C:\\SCTAPITests\\SCTApiTests\\SCTApiTestProject.csproj",
       "packagesPath": "C:\\Users\\64210\\.nuget\\packages\\",
-      "outputPath": "C:\\APITests\\SCTApiTests\\obj\\",
+      "outputPath": "C:\\SCTAPITests\\SCTApiTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\64210\\AppData\\Roaming\\NuGet\\NuGet.Config"
