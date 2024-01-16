@@ -32,7 +32,6 @@ namespace SCTApiTestProject.Tests
         [Test]
         public void GalleryPromotionDescriptionShouldContainExpectedText()
         {
-            // Act
             var promotions = categoryDetails?.Promotions;
             var galleryPromotion = promotions != null ? Array.Find(promotions, p => p.Name == "Gallery") : null;
 
