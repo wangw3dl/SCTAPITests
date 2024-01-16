@@ -38,7 +38,7 @@ namespace SCTApiTestProject.Tests
 
             // Assert the Promotions element with Name = "Gallery" has a Description that contains the text "Good position in category"
             StringAssert.Contains("Good position in category", galleryPromotion?.Description,
-                "Gallery promotion description does not contain expected text."); 
+                "Gallery promotion description does not contain expected text.");
         }
     }
 }
