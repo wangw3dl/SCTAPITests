@@ -404,7 +404,8 @@ C:\SCTAPITests\SCTApiTests\obj\Debug\net7.0\SCTApiTestProject.GeneratedMSBuildEd
 C:\SCTAPITests\SCTApiTests\obj\Debug\net7.0\SCTApiTestProject.AssemblyInfoInputs.cache
 C:\SCTAPITests\SCTApiTests\obj\Debug\net7.0\SCTApiTestProject.AssemblyInfo.cs
 C:\SCTAPITests\SCTApiTests\obj\Debug\net7.0\SCTApiTestProject.csproj.CoreCompileInputs.cache
-C:\SCTAPITests\SCTApiTests\obj\Debug\net7.0\SCTApiTestProject.csproj.CopyComplete
+C:\SCTAPITests\SCTApiTests\obj\Debug\net7.0\SCTApiTestProject.sourcelink.json
+C:\SCTAPITests\SCTApiTests\obj\Debug\net7.0\SCTApiTe.2EF7656E.Up2Date
 C:\SCTAPITests\SCTApiTests\obj\Debug\net7.0\SCTApiTestProject.dll
 C:\SCTAPITests\SCTApiTests\obj\Debug\net7.0\refint\SCTApiTestProject.dll
 C:\SCTAPITests\SCTApiTests\obj\Debug\net7.0\SCTApiTestProject.pdb
